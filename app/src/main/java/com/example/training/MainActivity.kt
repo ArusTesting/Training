@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rowRole = findViewById<LinearLayout>(R.id.rowRole)
         val rowEmail = findViewById<LinearLayout>(R.id.rowEmail)
+        val rowPhone = findViewById<LinearLayout>(R.id.rowPhone)
         rowRole.setOnClickListener {
             val intent = Intent(this, RoleActivity::class.java)
             roleLauncher.launch(intent)
@@ -36,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         rowEmail.setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:sarah@school.edu")
+            }
+            startActivity(intent)
+        }
+        rowPhone.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:+15559876547")
             }
             startActivity(intent)
         }

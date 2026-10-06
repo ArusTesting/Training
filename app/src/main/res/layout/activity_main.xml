@@ -146,6 +146,7 @@
                     android:background="@drawable/bg_information_gray"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:id="@+id/rowPhone"
                     android:padding="8dp">
 
                     <TextView
@@ -314,6 +315,7 @@
                     <Switch
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layoutDirection="ltr"
                         android:checked="true" />
 
                 </LinearLayout>
@@ -358,6 +360,7 @@
                     <Switch
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layoutDirection="ltr"
                         android:checked="true" />
 
                 </LinearLayout>
